@@ -34,6 +34,7 @@ public class BoardController {
 	private ProducerService producerService;
 	
 	public BoardController(BoardService boardService, ProducerService producerService) {
+		//test
 		this.boardService = boardService;
 		this.producerService = producerService;
 	}
