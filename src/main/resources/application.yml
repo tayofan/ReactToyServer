@@ -1,0 +1,32 @@
+kafka:
+  bootstrapServers: 127.0.0.1:9092
+  consumer:
+    groupId: springBoot
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  topic:
+    name: springBoot  
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource-pg:
+    jdbc-url: jdbc:postgresql://localhost:5432/kafka
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+#  datasoruce-phoenix:
+#    jdbc-url: jdbc:phoenix:192.168.0.150,192.168.0.151,192.168.0.152:22181
+#    username: 
+#    password: 
+#    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+
+logging:
+  config: classpath:logback-dev.xml
+  
+jwt:
+  secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK

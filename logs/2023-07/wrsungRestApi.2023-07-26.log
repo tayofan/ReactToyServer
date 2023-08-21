@@ -1,0 +1,1473 @@
+2023-07-26 08:59:48.994 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Starting ReactToyServerApplication using Java 17.0.3 with PID 13880 (C:\projects\ReactToyServer\target\classes started by ocean in C:\projects\ReactToyServer)
+2023-07-26 08:59:48.996 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 08:59:49.721 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 08:59:49.727 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 08:59:49.728 INFO  [main] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-07-26 08:59:49.729 INFO  [main] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-26 08:59:49.836 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-07-26 08:59:49.836 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 812 ms
+2023-07-26 08:59:50.291 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b5021d1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6befbb12, org.springframework.security.web.context.SecurityContextHolderFilter@48567727, org.springframework.security.web.header.HeaderWriterFilter@49b89425, org.springframework.web.filter.CorsFilter@21d9cd04, org.springframework.security.web.authentication.logout.LogoutFilter@78b0ec3a, kr.co.ocean.jwt.JwtAuthenticationFilter@799f354a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@259287ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dada335, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33bdd01, org.springframework.security.web.session.SessionManagementFilter@5ac044ef, org.springframework.security.web.access.ExceptionTranslationFilter@1c62c3fd, org.springframework.security.web.access.intercept.AuthorizationFilter@693f2213]
+2023-07-26 08:59:50.465 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 08:59:50.483 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 08:59:50.516 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-26 08:59:50.581 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 08:59:50.582 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 08:59:50.582 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690329590580
+2023-07-26 08:59:50.584 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-26 08:59:50.596 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Started ReactToyServerApplication in 2.009 seconds (process running for 3.131)
+2023-07-26 08:59:50.820 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-26 08:59:50.821 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-26 08:59:50.822 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-26 08:59:50.824 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 08:59:50.842 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-d494b64c-85d2-4c3b-ad5c-37582bba3f0a
+2023-07-26 08:59:50.842 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-26 08:59:50.842 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 08:59:50.854 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=76, memberId='consumer-springBoot-1-d494b64c-85d2-4c3b-ad5c-37582bba3f0a', protocol='range'}
+2023-07-26 08:59:50.855 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 76: {consumer-springBoot-1-d494b64c-85d2-4c3b-ad5c-37582bba3f0a=Assignment(partitions=[springBoot-0])}
+2023-07-26 08:59:50.893 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=76, memberId='consumer-springBoot-1-d494b64c-85d2-4c3b-ad5c-37582bba3f0a', protocol='range'}
+2023-07-26 08:59:50.894 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-26 08:59:50.896 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-26 08:59:50.911 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-26 08:59:50.912 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-26 09:00:19.867 INFO  [http-nio-8080-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 09:00:19.868 INFO  [http-nio-8080-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 09:00:19.868 INFO  [http-nio-8080-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+2023-07-26 09:00:19.920 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 09:00:19.920 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 09:00:19.922 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 09:00:19.922 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 09:00:19.950 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:00:19.950 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:00:19.974 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:00:19.974 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:00:19.996 INFO  [http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2023-07-26 09:00:20.179 INFO  [http-nio-8080-exec-5] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@710ce4e9
+2023-07-26 09:00:20.181 INFO  [http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2023-07-26 09:05:31.925 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:05:31.925 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:05:31.926 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:05:31.926 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:05:34.904 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:05:34.904 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:05:34.905 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:05:34.906 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:06:22.803 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:06:22.803 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:06:22.804 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:06:22.804 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:08:51.116 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-26 09:10:57.605 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:10:57.605 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:10:57.606 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:10:57.606 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:11:01.782 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:11:01.782 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:11:01.783 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:11:01.784 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:54.440 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:54.442 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=40, perPageNum=10}
+2023-07-26 09:23:54.442 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:55.050 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:55.051 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=50, perPageNum=10}
+2023-07-26 09:23:55.051 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:55.395 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:55.396 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=80, perPageNum=10}
+2023-07-26 09:23:55.396 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:55.785 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:55.787 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=120, perPageNum=10}
+2023-07-26 09:23:55.787 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:56.234 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:56.235 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=170, perPageNum=10}
+2023-07-26 09:23:56.235 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:56.546 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:56.547 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=210, perPageNum=10}
+2023-07-26 09:23:56.548 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 09:23:58.320 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 09:23:58.321 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 09:23:58.321 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 14:28:09.508 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 14:28:09.508 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 14:28:09.511 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 14:28:09.511 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 14:28:09.531 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:09.531 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:09.539 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 14:28:09.539 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 14:28:12.477 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:12.479 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=50}
+2023-07-26 14:28:12.479 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 14:28:14.658 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - [/detail] code: 303
+2023-07-26 14:28:14.658 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - [/detail] param: {no=303}
+2023-07-26 14:28:14.662 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - [/detail] voList: [BoardVO [code=null, title=auctor, velit eget, regDt=2023-09-17 08:55:05, detail=arcu. Vestibulum ante ipsum, delDt=null, updtDt=2023-09-17 08:55:05, author=Ferdinand, no=303, test=null]]
+2023-07-26 14:28:16.002 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:16.002 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:16.003 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=50}
+2023-07-26 14:28:16.003 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 14:28:18.347 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:18.349 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=30}
+2023-07-26 14:28:18.349 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 14:28:21.040 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 14:28:21.041 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 14:28:21.041 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:07.519 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 15:31:07.519 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 15:31:07.521 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 15:31:07.521 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 15:31:07.536 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:07.538 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:07.539 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:07.539 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:09.702 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:09.702 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:09.703 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:09.703 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:11.546 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:11.546 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:11.547 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:11.547 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:13.467 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:13.470 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:13.472 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:13.472 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:24.718 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:24.719 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:24.720 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:24.721 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:27.147 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:27.147 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:27.148 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:27.148 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:31.094 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:31.094 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:31.095 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:31.095 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:33.636 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:33.638 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:33.640 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:33.640 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:34.310 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.313 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.316 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:34.316 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:34.580 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.580 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.581 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:34.581 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:34.767 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.767 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.768 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:34.769 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:34.935 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.936 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:34.937 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:34.937 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:44.690 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:44.691 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:44.692 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:44.692 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:31:46.487 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:46.487 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:31:46.489 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:31:46.489 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:24.165 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:24.167 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 15:33:24.167 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:31.619 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:31.644 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:31.645 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 15:33:31.645 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:32.098 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.105 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.107 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 15:33:32.107 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:32.433 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.441 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.442 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 15:33:32.442 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:32.858 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.865 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:32.866 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 15:33:32.866 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:34.029 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:34.031 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=80, perPageNum=10}
+2023-07-26 15:33:34.031 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:34.510 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:34.512 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=100, perPageNum=10}
+2023-07-26 15:33:34.512 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:34.751 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:34.752 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=120, perPageNum=10}
+2023-07-26 15:33:34.752 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:35.196 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:35.198 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:35.198 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:35.961 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:35.966 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:35.967 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:35.967 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:36.432 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:36.437 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:36.438 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:36.438 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:36.713 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:36.720 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:36.721 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:36.721 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:36.993 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.000 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.001 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:37.001 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:37.265 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.270 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.271 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:37.271 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:37.617 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.621 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.622 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:37.622 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:37.817 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.822 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:37.823 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:37.823 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:38.065 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:38.071 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:38.071 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:38.071 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:38.840 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:38.847 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:38.848 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:38.848 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:39.064 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.070 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.070 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:39.070 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:39.329 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.335 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.335 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:39.335 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:39.641 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.647 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:39.648 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:39.648 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:40.288 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.295 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.295 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:40.295 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:40.697 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.702 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.703 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:40.703 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:40.888 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.895 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:40.896 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:40.896 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:41.056 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:41.061 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:41.062 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:41.062 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:41.208 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:41.214 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:41.215 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:41.215 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.027 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.036 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.036 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.036 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.177 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.184 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.185 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.185 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.346 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.352 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.353 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.353 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.505 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.512 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.512 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.512 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.729 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.736 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.737 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.737 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:42.913 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.919 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:42.920 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:42.920 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.082 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.089 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.089 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.089 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.242 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.248 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.249 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.249 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.401 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.407 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.407 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.407 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.554 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.560 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.561 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.561 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.697 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.705 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.706 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.706 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:43.865 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.873 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:43.873 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:43.874 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.025 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.032 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.033 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.033 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.177 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.182 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.183 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.183 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.337 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.343 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.344 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.344 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.480 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.489 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.489 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.489 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.641 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.647 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.648 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.648 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.801 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.807 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.808 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.808 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:44.929 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.936 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:44.937 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:44.937 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:45.081 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.087 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.088 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:45.088 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:45.457 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.463 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.464 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:45.464 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:45.617 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.624 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:45.624 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:45.624 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:49.335 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:49.336 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=550, perPageNum=50}
+2023-07-26 15:33:49.336 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:51.540 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:51.542 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 15:33:51.542 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:53.306 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:53.307 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=550, perPageNum=50}
+2023-07-26 15:33:53.307 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:54.414 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:54.414 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=50, perPageNum=50}
+2023-07-26 15:33:54.414 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:56.993 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:56.994 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=200, perPageNum=50}
+2023-07-26 15:33:56.994 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:33:58.564 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:33:58.565 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=50}
+2023-07-26 15:33:58.565 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:34:11.831 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:34:11.831 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:34:11.832 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:35:10.532 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:35:10.532 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:35:10.533 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:35:10.533 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:49:14.813 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:49:14.813 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:49:14.815 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:49:14.815 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:49:17.409 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:49:17.409 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:49:17.410 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:49:17.410 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:55:12.696 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:55:12.696 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:55:12.697 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:55:12.697 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:56:39.211 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:56:39.211 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:56:39.211 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:56:39.211 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:57:25.566 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:57:25.567 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:57:25.567 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:57:25.567 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:57:47.147 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:57:47.147 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:57:47.148 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:57:47.149 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:58:11.602 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:58:11.603 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:58:11.606 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:58:11.606 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 15:58:16.827 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:58:16.827 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 15:58:16.828 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 15:58:16.828 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:01:11.998 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 16:01:11.999 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.TokenProvider] - 만료된 JWT 토큰입니다.
+2023-07-26 16:01:12.000 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 16:01:12.000 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 재발급
+2023-07-26 16:01:12.011 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:12.012 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:01:12.012 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:01:12.012 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:31.399 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:31.399 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:31.400 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:01:31.400 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:01:53.514 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:53.514 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:01:53.514 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:01:53.514 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:08:14.520 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:08:14.535 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:08:14.539 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:08:14.539 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:09:28.864 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:28.864 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:28.865 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:09:28.865 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:09:32.330 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:32.330 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:32.331 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:09:32.331 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:09:58.612 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:58.612 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:09:58.613 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:09:58.613 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:10:04.124 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:10:04.125 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=50}
+2023-07-26 16:10:04.125 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:10:05.418 INFO  [http-nio-8080-exec-7] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:10:05.418 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:10:05.418 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:12:26.198 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:12:26.198 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:12:26.199 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:12:26.199 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:12:29.813 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:12:29.813 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:12:29.814 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:12:29.814 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:01.137 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:01.138 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=30, perPageNum=10}
+2023-07-26 16:14:01.138 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:01.544 INFO  [http-nio-8080-exec-3] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:01.545 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=70, perPageNum=10}
+2023-07-26 16:14:01.545 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:01.992 INFO  [http-nio-8080-exec-10] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:01.993 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=110, perPageNum=10}
+2023-07-26 16:14:01.993 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:04.233 INFO  [http-nio-8080-exec-4] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:04.234 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=90, perPageNum=10}
+2023-07-26 16:14:04.234 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:04.728 INFO  [http-nio-8080-exec-6] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:04.729 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=60, perPageNum=10}
+2023-07-26 16:14:04.729 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:05.168 INFO  [http-nio-8080-exec-5] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:05.169 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=10, perPageNum=10}
+2023-07-26 16:14:05.169 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:05.600 INFO  [http-nio-8080-exec-8] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:05.601 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:14:05.601 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:07.617 INFO  [http-nio-8080-exec-9] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:07.618 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=90, perPageNum=10}
+2023-07-26 16:14:07.618 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:08.080 INFO  [http-nio-8080-exec-2] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:08.081 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=160, perPageNum=10}
+2023-07-26 16:14:08.081 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 16:14:09.328 INFO  [http-nio-8080-exec-1] [kr.co.ocean.jwt.JwtAuthenticationFilter] - 인증성공
+2023-07-26 16:14:09.328 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-26 16:14:09.328 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - tjdtkd3869
+2023-07-26 17:13:13.633 INFO  [RMI TCP Connection(503)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-07-26 17:13:13.659 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-26 17:13:13.661 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-26 17:13:13.661 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Member consumer-springBoot-1-d494b64c-85d2-4c3b-ad5c-37582bba3f0a sending LeaveGroup request to coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-07-26 17:13:13.663 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:13:13.663 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:13:13.663 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-26 17:13:13.663 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:13:13.663 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:13:13.687 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:13:13.687 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:13:13.687 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:13:13.691 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-26 17:13:13.692 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-26 17:13:13.704 INFO  [RMI TCP Connection(503)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:13.704 INFO  [RMI TCP Connection(503)-127.0.0.1] [o.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2023-07-26 17:13:13.706 INFO  [RMI TCP Connection(503)-127.0.0.1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-26 17:13:13.711 WARN  [RMI TCP Connection(503)-127.0.0.1] [o.a.c.loader.WebappClassLoaderBase] - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-07-26 17:13:13.724 INFO  [RMI TCP Connection(503)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:13.729 INFO  [RMI TCP Connection(503)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-07-26 17:13:13.733 INFO  [RMI TCP Connection(503)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2023-07-26 17:13:16.288 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Starting ReactToyServerApplication using Java 17.0.3 with PID 8300 (C:\projects\ReactToyServer\target\classes started by ocean in C:\projects\ReactToyServer)
+2023-07-26 17:13:16.289 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 17:13:17.011 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 17:13:17.017 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:17.018 INFO  [main] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-07-26 17:13:17.018 INFO  [main] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-26 17:13:17.103 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:13:17.103 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 786 ms
+2023-07-26 17:13:17.403 INFO  [main] [o.a.k.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-07-26 17:13:17.455 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:13:17.456 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:13:17.456 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359197454
+2023-07-26 17:13:17.656 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a5e2525, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6546371, org.springframework.security.web.context.SecurityContextHolderFilter@2de3b052, org.springframework.security.web.header.HeaderWriterFilter@64c8fcfb, org.springframework.web.filter.CorsFilter@2b458cd6, org.springframework.security.web.authentication.logout.LogoutFilter@7c5f29c6, kr.co.ocean.jwt.JwtAuthenticationFilter@4c2c44e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16bbaab3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ffd0114, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7103745, org.springframework.security.web.session.SessionManagementFilter@2120bed, org.springframework.security.web.access.ExceptionTranslationFilter@21733cbe, org.springframework.security.web.access.intercept.AuthorizationFilter@510da778]
+2023-07-26 17:13:17.832 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:17.840 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 17:13:17.857 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-26 17:13:17.885 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:13:17.885 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:13:17.885 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359197885
+2023-07-26 17:13:17.886 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-26 17:13:17.897 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Started ReactToyServerApplication in 2.001 seconds (process running for 2.577)
+2023-07-26 17:13:17.899 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-26 17:13:17.901 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-26 17:13:17.901 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-26 17:13:17.902 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:13:17.912 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-bd019db7-8494-4da4-b1f3-e52c26235697
+2023-07-26 17:13:17.912 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-26 17:13:17.912 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:13:17.916 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=78, memberId='consumer-springBoot-1-bd019db7-8494-4da4-b1f3-e52c26235697', protocol='range'}
+2023-07-26 17:13:17.917 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 78: {consumer-springBoot-1-bd019db7-8494-4da4-b1f3-e52c26235697=Assignment(partitions=[springBoot-0])}
+2023-07-26 17:13:17.922 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=78, memberId='consumer-springBoot-1-bd019db7-8494-4da4-b1f3-e52c26235697', protocol='range'}
+2023-07-26 17:13:17.922 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-26 17:13:17.924 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-26 17:13:17.932 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-26 17:13:17.932 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-26 17:13:42.781 INFO  [RMI TCP Connection(7)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-07-26 17:13:42.784 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-26 17:13:42.784 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-26 17:13:42.784 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Member consumer-springBoot-1-bd019db7-8494-4da4-b1f3-e52c26235697 sending LeaveGroup request to coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-07-26 17:13:42.785 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:13:42.785 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:13:42.785 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-26 17:13:42.785 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:13:42.785 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:13:42.789 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:13:42.789 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:13:42.789 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:13:42.792 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-26 17:13:42.793 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-26 17:13:42.806 INFO  [RMI TCP Connection(7)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:42.806 INFO  [RMI TCP Connection(7)-127.0.0.1] [o.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2023-07-26 17:13:42.811 INFO  [RMI TCP Connection(7)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:13:42.814 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for adminclient-1 unregistered
+2023-07-26 17:13:42.815 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:13:42.815 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:13:42.815 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:15:35.440 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - Starting ReactToyServerApplicationTests using Java 17.0.3 with PID 18948 (started by ocean in C:\projects\ReactToyServer)
+2023-07-26 17:15:35.442 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 17:15:36.447 INFO  [main] [o.a.k.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-07-26 17:15:36.570 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:15:36.571 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:15:36.571 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359336569
+2023-07-26 17:15:36.842 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ef5dd23, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@163e8949, org.springframework.security.web.context.SecurityContextHolderFilter@2755617b, org.springframework.security.web.header.HeaderWriterFilter@14d1737a, org.springframework.web.filter.CorsFilter@6eede35e, org.springframework.security.web.authentication.logout.LogoutFilter@77663cd7, kr.co.ocean.jwt.JwtAuthenticationFilter@64c25a62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d9f5fce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b377a53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43e8f1c, org.springframework.security.web.session.SessionManagementFilter@5b332439, org.springframework.security.web.access.ExceptionTranslationFilter@5d601832, org.springframework.security.web.access.intercept.AuthorizationFilter@58601e7a]
+2023-07-26 17:15:37.173 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-26 17:15:37.205 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:15:37.206 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:15:37.206 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359337205
+2023-07-26 17:15:37.207 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-26 17:15:37.221 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - Started ReactToyServerApplicationTests in 2.123 seconds (process running for 2.958)
+2023-07-26 17:15:37.225 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-26 17:15:37.226 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-26 17:15:37.227 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-26 17:15:37.229 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:15:37.240 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-1f5e873d-10f6-4dce-a845-8ad8dfd05235
+2023-07-26 17:15:37.241 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-26 17:15:37.241 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:15:37.245 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=80, memberId='consumer-springBoot-1-1f5e873d-10f6-4dce-a845-8ad8dfd05235', protocol='range'}
+2023-07-26 17:15:37.247 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 80: {consumer-springBoot-1-1f5e873d-10f6-4dce-a845-8ad8dfd05235=Assignment(partitions=[springBoot-0])}
+2023-07-26 17:15:37.253 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=80, memberId='consumer-springBoot-1-1f5e873d-10f6-4dce-a845-8ad8dfd05235', protocol='range'}
+2023-07-26 17:15:37.253 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-26 17:15:37.256 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-26 17:15:37.269 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-26 17:15:37.271 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-26 17:15:38.512 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for adminclient-1 unregistered
+2023-07-26 17:15:38.515 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:15:38.515 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:15:38.516 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:15:38.544 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-26 17:15:38.545 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-26 17:15:38.545 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Member consumer-springBoot-1-1f5e873d-10f6-4dce-a845-8ad8dfd05235 sending LeaveGroup request to coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-07-26 17:15:38.546 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:15:38.546 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:15:38.546 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-26 17:15:38.546 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:15:38.546 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:15:38.550 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:15:38.550 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:15:38.550 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:15:38.552 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-26 17:15:38.553 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-26 17:18:14.151 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - Starting ReactToyServerApplicationTests using Java 17.0.3 with PID 932 (started by ocean in C:\projects\ReactToyServer)
+2023-07-26 17:18:14.153 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 17:18:15.162 INFO  [main] [o.a.k.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-07-26 17:18:15.292 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:18:15.293 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:18:15.293 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359495290
+2023-07-26 17:18:15.557 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6734ff92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51eb0e84, org.springframework.security.web.context.SecurityContextHolderFilter@1515f782, org.springframework.security.web.header.HeaderWriterFilter@6e8f2094, org.springframework.web.filter.CorsFilter@4ce267cc, org.springframework.security.web.authentication.logout.LogoutFilter@615e83ac, kr.co.ocean.jwt.JwtAuthenticationFilter@2eebce87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@638afcaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ef5dd23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ee37ca7, org.springframework.security.web.session.SessionManagementFilter@394a6d2b, org.springframework.security.web.access.ExceptionTranslationFilter@7e18ced7, org.springframework.security.web.access.intercept.AuthorizationFilter@474e34e4]
+2023-07-26 17:18:15.890 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-26 17:18:15.922 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:18:15.923 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:18:15.923 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690359495922
+2023-07-26 17:18:15.924 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-26 17:18:15.939 INFO  [main] [k.c.ocean.ReactToyServerApplicationTests] - Started ReactToyServerApplicationTests in 2.124 seconds (process running for 2.792)
+2023-07-26 17:18:15.943 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-26 17:18:15.945 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-26 17:18:15.945 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-26 17:18:15.947 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:18:15.961 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-7c99a1fc-a7d0-4e34-84ba-00e64411edf1
+2023-07-26 17:18:15.961 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-26 17:18:15.961 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:18:15.964 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=82, memberId='consumer-springBoot-1-7c99a1fc-a7d0-4e34-84ba-00e64411edf1', protocol='range'}
+2023-07-26 17:18:15.966 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 82: {consumer-springBoot-1-7c99a1fc-a7d0-4e34-84ba-00e64411edf1=Assignment(partitions=[springBoot-0])}
+2023-07-26 17:18:15.972 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=82, memberId='consumer-springBoot-1-7c99a1fc-a7d0-4e34-84ba-00e64411edf1', protocol='range'}
+2023-07-26 17:18:15.973 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-26 17:18:15.975 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-26 17:18:15.986 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-26 17:18:15.988 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-26 17:18:16.592 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for adminclient-1 unregistered
+2023-07-26 17:18:16.595 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:18:16.595 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:18:16.595 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:18:16.611 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-26 17:18:16.612 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-26 17:18:16.612 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Member consumer-springBoot-1-7c99a1fc-a7d0-4e34-84ba-00e64411edf1 sending LeaveGroup request to coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-07-26 17:18:16.613 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:18:16.613 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:18:16.613 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-26 17:18:16.613 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 17:18:16.613 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 17:18:16.617 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 17:18:16.617 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 17:18:16.617 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 17:18:16.619 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-26 17:18:16.620 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-26 17:30:51.574 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Starting ReactToyServerApplication using Java 17.0.3 with PID 11884 (C:\projects\ReactToyServer\target\classes started by ocean in C:\projects\ReactToyServer)
+2023-07-26 17:30:51.575 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 17:30:52.274 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 17:30:52.279 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:30:52.281 INFO  [main] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-07-26 17:30:52.281 INFO  [main] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-26 17:30:52.341 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:30:52.342 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 737 ms
+2023-07-26 17:30:52.579 INFO  [main] [o.a.k.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-07-26 17:30:52.623 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:30:52.624 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:30:52.624 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690360252622
+2023-07-26 17:30:52.822 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7757025d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68fc9167, org.springframework.security.web.context.SecurityContextHolderFilter@31228d83, org.springframework.security.web.header.HeaderWriterFilter@52d96367, org.springframework.web.filter.CorsFilter@52c46334, org.springframework.security.web.authentication.logout.LogoutFilter@568f4faa, kr.co.ocean.jwt.JwtAuthenticationFilter@12fccff0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28bf82d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@566fe83c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d767218, org.springframework.security.web.session.SessionManagementFilter@2bb717d7, org.springframework.security.web.access.ExceptionTranslationFilter@634aa81e, org.springframework.security.web.access.intercept.AuthorizationFilter@643f6179]
+2023-07-26 17:30:52.998 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 17:30:53.005 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 17:30:53.023 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-26 17:30:53.050 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-26 17:30:53.050 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-26 17:30:53.050 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690360253050
+2023-07-26 17:30:53.051 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-26 17:30:53.061 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Started ReactToyServerApplication in 1.833 seconds (process running for 2.182)
+2023-07-26 17:30:53.063 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-26 17:30:53.064 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-26 17:30:53.064 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-26 17:30:53.065 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:30:53.073 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-b88b2b3f-08db-4105-a60f-bad304ab622f
+2023-07-26 17:30:53.074 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-26 17:30:53.074 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-26 17:30:53.076 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=84, memberId='consumer-springBoot-1-b88b2b3f-08db-4105-a60f-bad304ab622f', protocol='range'}
+2023-07-26 17:30:53.078 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 84: {consumer-springBoot-1-b88b2b3f-08db-4105-a60f-bad304ab622f=Assignment(partitions=[springBoot-0])}
+2023-07-26 17:30:53.082 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=84, memberId='consumer-springBoot-1-b88b2b3f-08db-4105-a60f-bad304ab622f', protocol='range'}
+2023-07-26 17:30:53.082 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-26 17:30:53.084 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-26 17:30:53.090 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-26 17:30:53.091 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-26 17:35:52.846 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-26 17:39:53.177 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-26 17:40:52.872 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-26 17:45:53.004 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-26 17:50:53.149 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-26 17:55:53.279 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-26 18:00:53.416 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-26 18:01:10.832 INFO  [RMI TCP Connection(38)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-07-26 18:01:10.835 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-26 18:01:10.836 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-26 18:01:10.836 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Member consumer-springBoot-1-b88b2b3f-08db-4105-a60f-bad304ab622f sending LeaveGroup request to coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-07-26 18:01:10.837 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 18:01:10.837 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 18:01:10.837 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-26 18:01:10.837 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-26 18:01:10.837 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-26 18:01:10.840 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 18:01:10.840 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 18:01:10.841 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-26 18:01:10.843 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-26 18:01:10.843 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-26 18:01:10.849 INFO  [RMI TCP Connection(38)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-26 18:01:10.850 INFO  [RMI TCP Connection(38)-127.0.0.1] [o.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2023-07-26 18:01:10.855 INFO  [RMI TCP Connection(38)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-26 18:01:10.858 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for adminclient-1 unregistered
+2023-07-26 18:01:10.859 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-26 18:01:10.859 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-26 18:01:10.859 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed

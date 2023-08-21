@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.ocean.jwt.dao.UserMapper">
+    
+    <select id="selectUserInfo" parameterType="String" resultType="kr.co.ocean.jwt.dto.UserImpl">
+        select id
+			 , pswd
+			 , name
+			 , roles
+		  from member
+		 where id = #{id} 
+    </select>
+    
+    <select id="selectRefreshToken" parameterType="String" resultType="kr.co.ocean.jwt.dto.RefreshTokenDto">
+    	select id, refresh_token, email 
+		  from "token"
+		 where refresh_token = #{str}
+    </select>
+    
+    <insert id="upsertRefreshToken" parameterType="kr.co.ocean.jwt.dto.RefreshTokenDto">
+    	insert into "token" (refresh_token,id,email)
+		values (#{refreshToken},#{id},#{email})
+		    on conflict (id)
+		    do update 
+		   set refresh_token = #{refreshToken}
+    </insert>
+            
+</mapper>

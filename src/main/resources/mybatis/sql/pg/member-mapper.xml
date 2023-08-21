@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.ocean.member.dao.MemberMapper">
+    
+    <select id="selectMemberInfoById" parameterType="String" resultType="kr.co.ocean.member.dto.MemberVO">
+        select id
+			 , name
+			 , email
+			 , pswd
+			 , active
+			 , roles
+		  from member
+		 where id = #{id} 
+		   and (del_dt is null
+		    or del_dt = 'enable')
+    </select>
+            
+    <select id="checkMember" parameterType="Map" resultType="kr.co.ocean.member.dto.MemberVO">
+    	select id
+    	     , name
+    	     , active
+    	  from member   
+    	 where id = #{id}
+    	   and pswd = #{password}
+    </select>
+            
+	<!-- 회원 추가 -->
+	<insert id="insertMember" parameterType="kr.co.ocean.member.dto.MemberVO">
+    	insert into "member"( id
+							, "name"
+							, email
+							, pswd
+							, active
+							, roles
+							, last_login_date
+							, reg_date
+							, del_date
+							, updt_date)
+			   values(#{id}
+					, #{name}
+					, #{email}
+					, #{pswd}
+					, #{active}
+					, #{rolestxt}
+					, #{lastLoginDate}
+					, #{regDate}
+					, #{delDate}
+					, #{updtDate})
+    </insert>
+	<!-- 회원 수정 -->
+	<!-- 회원 삭제(비활성화) -->
+    
+</mapper>

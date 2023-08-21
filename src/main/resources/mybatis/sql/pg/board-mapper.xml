@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.ocean.board.dao.BoardMapper">
+    
+    <select id="selectEnableBoards" resultType="kr.co.ocean.board.dto.BoardVO">
+        select code
+		     , title
+			 , reg_dt
+			 , author
+			 , no
+		  from board
+		 where (del_dt is null
+		    or del_dt = 'enable')
+    </select>
+    
+    <select id="selectPagingBoards" parameterType="Map" resultType="kr.co.ocean.board.dto.BoardVO">
+        select code
+		     , title
+			 , reg_dt
+			 , author
+			 , no
+		  from board
+		 where (del_dt is null
+		    or del_dt = 'enable')
+		    <if test="keyword != null and keyword != ''">
+	    	 and ${types} like '%' || #{keyword} || '%'
+	    	</if>
+	     order by "no" desc	
+		 limit ${perPageNum} offset ${recode}
+    </select>
+    
+    <select id="selectBoardsCount" parameterType="Map" resultType="int">
+    	select count(code) as totalCount
+    	  from board
+    	 where (del_dt is null
+		    or del_dt = 'enable')
+	    	<if test="keyword != null and keyword != ''">
+	    	 and ${type} like '%' || #{keyword} || '%'
+	    	</if>
+    </select>
+
+    <select id="selectDetailBaord" parameterType="Map" resultType="kr.co.ocean.board.dto.BoardVO">
+    	select title
+			 , reg_dt
+			 , updt_dt 
+			 , author
+			 , detail
+			 , no
+		  from board
+		 where no = ${no}
+    </select>
+    
+    <insert id="insertBoard" parameterType="kr.co.ocean.board.dto.BoardVO">
+    	insert into board(code,title,reg_dt,detail,author,no,updt_dt)
+			values(nextval('sq_board'),#{title},#{regDt},#{detail},#{author},currval('sq_board'),#{regDt})
+    </insert>
+    
+    <update id="disableBoard" parameterType="kr.co.ocean.board.dto.BoardVO">
+    	update board 
+		   set del_dt = #{delDt}
+		 where code = #{code} 
+    </update>
+    
+    <update id="updateBoard" parameterType="kr.co.ocean.board.dto.BoardVO">
+    	update board
+		   set updt_dt = #{updtDt}
+		     , title = #{title}
+		     , detail = #{detail}
+		 where no = ${no} 
+    </update>
+    
+</mapper>

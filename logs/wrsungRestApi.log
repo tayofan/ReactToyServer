@@ -1,0 +1,774 @@
+2023-07-28 08:26:05.011 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Starting ReactToyServerApplication using Java 17.0.3 with PID 9624 (C:\projects\ReactToyServer\target\classes started by ocean in C:\projects\ReactToyServer)
+2023-07-28 08:26:05.015 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-07-28 08:26:05.900 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-07-28 08:26:05.909 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-28 08:26:05.911 INFO  [main] [o.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2023-07-28 08:26:05.911 INFO  [main] [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-28 08:26:06.014 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2023-07-28 08:26:06.014 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 965 ms
+2023-07-28 08:26:06.513 INFO  [main] [o.a.k.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [127.0.0.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-07-28 08:26:06.605 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-28 08:26:06.606 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-28 08:26:06.606 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690500366604
+2023-07-28 08:26:06.618 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:06.620 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:06.727 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:06.728 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:06.806 INFO  [main] [o.s.s.web.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d767218, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@510da778, org.springframework.security.web.context.SecurityContextHolderFilter@61a704d3, org.springframework.security.web.header.HeaderWriterFilter@750cd36d, org.springframework.web.filter.CorsFilter@20a1b3ae, org.springframework.security.web.authentication.logout.LogoutFilter@6f8667bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@566fe83c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16bbaab3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54567b05, org.springframework.security.web.session.SessionManagementFilter@22b82ddf, org.springframework.security.web.access.ExceptionTranslationFilter@3302035b, org.springframework.security.web.access.intercept.AuthorizationFilter@68fc9167]
+2023-07-28 08:26:06.839 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:06.840 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.173 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:07.173 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.181 INFO  [main] [o.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-28 08:26:07.201 INFO  [main] [o.s.b.w.embedded.tomcat.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-28 08:26:07.219 INFO  [main] [o.a.k.clients.consumer.ConsumerConfig] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-springBoot-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = springBoot
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-07-28 08:26:07.251 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka version: 3.4.1
+2023-07-28 08:26:07.251 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka commitId: 8a516edc2755df89
+2023-07-28 08:26:07.251 INFO  [main] [o.a.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1690500367251
+2023-07-28 08:26:07.252 INFO  [main] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Subscribed to topic(s): springBoot
+2023-07-28 08:26:07.271 INFO  [main] [kr.co.ocean.ReactToyServerApplication] - Started ReactToyServerApplication in 2.752 seconds (process running for 3.433)
+2023-07-28 08:26:07.495 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:07.495 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.495 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:07.600 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:07.601 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.601 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:07.615 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:07.615 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.709 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:07.710 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.710 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:07.885 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:07.887 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:07.887 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:08.356 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:08.356 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:08.356 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:08.609 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:08.609 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:09.286 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:09.286 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:09.287 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:09.821 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:09.821 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:10.406 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:10.406 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:10.406 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:10.929 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:10.929 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:11.277 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:11.277 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:11.277 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:11.816 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:11.817 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:12.334 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:12.334 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:12.334 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:13.039 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:13.039 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:13.395 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:13.395 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:13.395 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:14.251 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:14.251 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:14.648 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:14.649 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:14.649 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:15.354 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:15.354 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:15.701 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:15.701 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:15.701 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:16.344 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:16.344 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:16.753 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:16.753 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:16.753 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:17.331 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:17.331 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:17.596 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:17.596 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:17.596 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:18.533 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:18.533 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:18.579 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:18.579 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:18.579 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:19.443 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:19.443 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:19.443 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:19.632 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:19.632 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:20.443 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:20.443 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:20.443 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:20.744 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:20.744 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:21.685 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:21.685 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:21.685 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:21.732 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:21.732 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:22.606 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:22.606 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:22.606 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:22.622 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:22.622 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:23.603 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:23.604 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:23.604 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:23.728 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:23.729 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:24.608 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:24.608 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:24.719 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:24.719 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:24.719 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:25.580 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:25.580 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:25.580 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:25.813 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:25.813 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:26.765 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:26.765 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:26.765 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:27.035 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:27.035 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:27.869 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:27.869 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:27.870 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:28.246 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:28.246 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:29.110 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:29.110 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:29.110 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:29.343 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:29.343 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:30.084 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:30.084 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:30.084 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:30.317 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:30.318 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:31.266 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:31.266 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:31.266 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:31.536 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:31.537 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:32.262 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:32.262 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:32.262 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:32.420 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:32.420 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:33.174 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:33.174 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:33.174 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:33.395 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:33.395 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:34.240 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:34.240 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:34.240 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:34.508 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:34.508 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:35.395 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:35.395 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:35.427 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:35.427 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:35.427 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:36.299 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:36.299 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:36.299 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:36.393 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:36.394 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:36.615 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.k.c.a.internals.AdminMetadataManager] - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+2023-07-28 08:26:37.281 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:37.281 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:37.439 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:37.439 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:37.439 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:38.383 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:38.383 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:38.429 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:38.429 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:38.429 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:39.370 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:39.370 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:39.605 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:39.606 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:39.606 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:40.245 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:40.246 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:40.711 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:40.711 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:40.711 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:41.115 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:41.116 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:41.694 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:41.695 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:41.695 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:42.316 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:42.316 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:42.628 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:42.628 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:42.628 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:43.515 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:43.515 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:43.672 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:43.672 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:43.672 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:44.386 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:44.386 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:44.713 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:44.713 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:44.713 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:45.583 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:45.584 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:45.629 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:45.629 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:45.629 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:46.457 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:46.457 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:46.802 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:46.802 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:46.803 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:47.333 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:47.334 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:47.644 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:47.645 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:47.645 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:48.205 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:48.205 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:48.499 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:48.499 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:48.499 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:49.360 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:49.361 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:49.361 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:49.405 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:49.406 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:50.506 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:50.507 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:50.598 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:50.598 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:50.598 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:51.384 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:51.384 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:51.706 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:51.706 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:51.707 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:52.366 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:52.366 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:52.901 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:52.901 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:52.901 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:53.352 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:53.352 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:53.879 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:53.879 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:53.879 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:54.441 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:54.441 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:54.799 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:54.799 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:54.800 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:55.533 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:55.533 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:55.966 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:55.966 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:55.966 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:56.622 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:56.622 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:56.952 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:56.952 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:56.952 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:57.609 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:57.609 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:57.843 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:57.843 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:57.843 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:58.810 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:26:58.810 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:58.888 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:58.888 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:58.888 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:26:59.931 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:26:59.931 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:26:59.931 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:00.008 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:00.008 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:00.847 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:27:00.847 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:00.847 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:00.879 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:00.879 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:01.766 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:27:01.766 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:01.766 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:01.860 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:01.860 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:02.960 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:02.960 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:02.976 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:27:02.976 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:02.976 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:03.841 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:03.841 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:04.217 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:27:04.217 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:04.217 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:04.823 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:04.823 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:05.324 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:27:05.324 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:05.325 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2023-07-28 08:27:05.921 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:27:05.921 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 08:27:06.530 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 2 : {springBoot=INVALID_REPLICATION_FACTOR}
+2023-07-28 08:27:06.617 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.k.c.a.internals.AdminMetadataManager] - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+2023-07-28 08:27:06.639 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 3 : {springBoot=INVALID_REPLICATION_FACTOR}
+2023-07-28 08:27:06.766 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 4 : {springBoot=LEADER_NOT_AVAILABLE}
+2023-07-28 08:27:06.767 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cluster ID: B4anUJ1FShmT32vaVUGnlg
+2023-07-28 08:27:06.873 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 7 : {springBoot=LEADER_NOT_AVAILABLE}
+2023-07-28 08:27:06.981 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 9 : {springBoot=LEADER_NOT_AVAILABLE}
+2023-07-28 08:27:07.090 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 11 : {springBoot=LEADER_NOT_AVAILABLE}
+2023-07-28 08:27:07.199 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error while fetching metadata with correlation id 13 : {springBoot=LEADER_NOT_AVAILABLE}
+2023-07-28 08:27:07.307 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.Metadata] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting the last seen epoch of partition springBoot-0 to 0 since the associated topicId changed from null to TVGPiFNrQ9SSz0pvUCaTmg
+2023-07-28 08:27:07.311 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Discovered group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null)
+2023-07-28 08:27:07.312 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-28 08:27:07.329 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: need to re-join with the given member-id: consumer-springBoot-1-dd02d6e4-0e31-4c32-b867-8e77b7434d1b
+2023-07-28 08:27:07.329 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-07-28 08:27:07.329 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] (Re-)joining group
+2023-07-28 08:27:07.340 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully joined group with generation Generation{generationId=86, memberId='consumer-springBoot-1-dd02d6e4-0e31-4c32-b867-8e77b7434d1b', protocol='range'}
+2023-07-28 08:27:07.343 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Finished assignment for group at generation 86: {consumer-springBoot-1-dd02d6e4-0e31-4c32-b867-8e77b7434d1b=Assignment(partitions=[springBoot-0])}
+2023-07-28 08:27:07.378 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Successfully synced group in generation Generation{generationId=86, memberId='consumer-springBoot-1-dd02d6e4-0e31-4c32-b867-8e77b7434d1b', protocol='range'}
+2023-07-28 08:27:07.378 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Notifying assignor about the new Assignment(partitions=[springBoot-0])
+2023-07-28 08:27:07.380 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Adding newly assigned partitions: springBoot-0
+2023-07-28 08:27:07.393 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Setting offset for partition springBoot-0 to the committed offset FetchPosition{offset=237, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 0 rack: null)], epoch=0}}
+2023-07-28 08:27:07.394 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions assigned: [springBoot-0]
+2023-07-28 08:32:06.965 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2023-07-28 08:36:07.265 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node -1 disconnected.
+2023-07-28 08:37:06.994 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 08:42:07.114 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 08:47:07.226 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 08:52:07.319 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 08:57:07.417 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:02:07.519 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:07:07.633 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:12:07.729 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:17:07.841 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:22:07.957 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:27:08.074 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:32:08.195 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:37:08.303 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:42:08.427 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:46:40.692 INFO  [http-nio-8080-exec-1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-28 09:46:40.692 INFO  [http-nio-8080-exec-1] [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-07-28 09:46:40.705 INFO  [http-nio-8080-exec-1] [o.s.web.servlet.DispatcherServlet] - Completed initialization in 12 ms
+2023-07-28 09:46:40.783 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:46:40.783 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:46:40.810 INFO  [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2023-07-28 09:46:41.163 INFO  [http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59c29c66
+2023-07-28 09:46:41.167 INFO  [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2023-07-28 09:47:08.544 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:48:09.173 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:48:09.173 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:48:13.039 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:48:13.039 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:49:47.143 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:49:47.143 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:50:14.148 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:50:14.148 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:51:04.038 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:51:04.038 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:51:05.107 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:51:05.107 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:51:25.632 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:51:25.632 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:51:55.124 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:51:55.125 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:52:08.654 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 09:52:21.228 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:52:21.228 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:54:06.601 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:54:06.601 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:54:09.706 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:54:09.706 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:56:00.142 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:56:00.142 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:56:01.561 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:56:01.562 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:56:42.717 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:56:42.717 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:56:49.203 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:56:49.203 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:56:59.323 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 09:56:59.323 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 09:57:08.772 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:00:59.484 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:00:59.484 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:02:08.888 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:07:09.005 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:07:47.131 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:07:47.132 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:07:49.500 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:07:49.500 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:08:13.426 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:08:13.426 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:08:27.989 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:08:27.989 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:10:41.422 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:10:41.422 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:11:58.794 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:11:58.794 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:09.120 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:12:36.975 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:36.975 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:37.745 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:37.745 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:38.033 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:38.033 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:38.208 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:38.208 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:38.745 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:38.745 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:38.968 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:38.969 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:39.163 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:39.163 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:39.344 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:39.344 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:39.709 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:39.709 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:40.032 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:40.032 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:12:40.368 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:12:40.368 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:17:09.240 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:18:44.446 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:18:44.446 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:22:09.366 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:26:07.929 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:26:07.929 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:26:53.768 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:26:53.768 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:27:09.477 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:27:52.401 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:27:52.401 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:27:54.211 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:27:54.211 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:28:30.901 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:28:30.901 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:30:13.160 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:30:13.160 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:30:14.587 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:30:14.587 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:32:09.595 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:34:47.989 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:34:47.989 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:35:34.022 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:35:34.022 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:35:46.896 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:35:46.896 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:35:48.035 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:35:48.036 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:35:56.866 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:35:56.866 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:37:09.711 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:37:56.914 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:37:56.914 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:40:13.307 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-28 10:40:13.307 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:40:52.889 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=40, perPageNum=10}
+2023-07-28 10:40:52.889 INFO  [http-nio-8080-exec-4] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:40:54.167 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=50, perPageNum=10}
+2023-07-28 10:40:54.167 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:42:09.839 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:45:59.114 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=50, perPageNum=10}
+2023-07-28 10:45:59.114 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:02.185 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-28 10:46:02.185 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:10.107 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=30, perPageNum=10}
+2023-07-28 10:46:10.107 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:10.777 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=40, perPageNum=10}
+2023-07-28 10:46:10.777 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:11.665 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=20, perPageNum=10}
+2023-07-28 10:46:11.665 INFO  [http-nio-8080-exec-7] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:12.176 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, type=, recode=0, perPageNum=10}
+2023-07-28 10:46:12.176 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:46:56.769 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:46:56.769 INFO  [http-nio-8080-exec-10] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:47:09.955 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:47:21.791 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:47:21.792 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:47:41.742 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:47:41.742 INFO  [http-nio-8080-exec-5] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:48:54.439 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:48:54.439 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:52:10.071 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:56:16.123 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:56:16.123 INFO  [http-nio-8080-exec-2] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:56:21.995 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:56:21.995 INFO  [http-nio-8080-exec-3] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:57:10.185 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 10:57:26.925 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:57:26.925 INFO  [http-nio-8080-exec-6] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:57:37.040 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:57:37.041 INFO  [http-nio-8080-exec-8] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 10:57:38.944 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 10:57:38.944 INFO  [http-nio-8080-exec-9] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 11:00:36.253 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - {keyword=, types=, recode=0, perPageNum=10}
+2023-07-28 11:00:36.253 INFO  [http-nio-8080-exec-1] [k.c.o.board.controller.BoardController] - anonymousUser
+2023-07-28 11:02:10.312 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:07:10.436 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:12:10.554 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:17:10.676 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:22:10.804 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:27:10.909 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:32:11.026 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:37:11.153 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:42:11.274 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:47:11.388 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:52:11.509 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 11:57:11.638 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:02:11.755 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:07:11.882 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:12:12.003 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:17:12.127 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:22:12.252 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:27:12.378 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:32:12.492 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:37:12.610 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:42:12.732 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:52:12.840 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 12:57:12.961 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:02:13.079 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:07:13.201 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:12:13.324 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:17:13.440 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:22:13.564 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:27:13.689 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:32:13.810 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:37:13.931 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:42:14.049 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:47:14.174 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:52:14.292 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:57:14.416 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:58:55.611 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:58:55.611 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node 0 disconnected.
+2023-07-28 13:58:55.611 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Cancelled in-flight FETCH request with correlation id 45660 due to node 0 being disconnected (elapsed time since creation: 232ms, elapsed time since send: 232ms, request timeout: 30000ms)
+2023-07-28 13:58:55.611 INFO  [kafka-coordinator-heartbeat-thread | springBoot] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node 2147483647 disconnected.
+2023-07-28 13:58:55.612 INFO  [kafka-coordinator-heartbeat-thread | springBoot] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Group coordinator 127.0.0.1:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-07-28 13:58:55.612 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.FetchSessionHandler] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Error sending fetch request (sessionId=1280135862, epoch=38952) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2023-07-28 13:58:55.726 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:58:55.726 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node 0 disconnected.
+2023-07-28 13:58:55.726 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:55.726 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:55.826 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:58:55.826 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:55.877 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node 0 disconnected.
+2023-07-28 13:58:55.877 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:56.028 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Node 0 disconnected.
+2023-07-28 13:58:56.028 WARN  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.clients.NetworkClient] - [AdminClient clientId=adminclient-1] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:56.079 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Node 0 disconnected.
+2023-07-28 13:58:56.079 WARN  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.clients.NetworkClient] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Connection to node 0 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-07-28 13:58:56.355 INFO  [RMI TCP Connection(342)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2023-07-28 13:58:56.373 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Revoke previously assigned partitions springBoot-0
+2023-07-28 13:58:56.374 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: partitions revoked: [springBoot-0]
+2023-07-28 13:58:56.375 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-28 13:58:56.375 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-28 13:58:56.375 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.clients.consumer.KafkaConsumer] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Unsubscribed all topics or patterns and assigned partitions
+2023-07-28 13:58:56.376 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-07-28 13:58:56.376 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.k.c.c.internals.ConsumerCoordinator] - [Consumer clientId=consumer-springBoot-1, groupId=springBoot] Request joining group due to: consumer pro-actively leaving the group
+2023-07-28 13:58:56.377 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-28 13:58:56.377 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-28 13:58:56.377 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-28 13:58:56.380 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.consumer for consumer-springBoot-1 unregistered
+2023-07-28 13:58:56.380 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [o.s.k.l.KafkaMessageListenerContainer] - springBoot: Consumer stopped
+2023-07-28 13:58:56.389 INFO  [RMI TCP Connection(342)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-07-28 13:58:56.389 INFO  [RMI TCP Connection(342)-127.0.0.1] [o.apache.catalina.core.StandardService] - Stopping service [Tomcat]
+2023-07-28 13:58:56.392 INFO  [RMI TCP Connection(342)-127.0.0.1] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-28 13:58:56.397 WARN  [RMI TCP Connection(342)-127.0.0.1] [o.a.c.loader.WebappClassLoaderBase] - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-07-28 13:58:56.405 INFO  [RMI TCP Connection(342)-127.0.0.1] [o.apache.coyote.http11.Http11NioProtocol] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-07-28 13:58:56.410 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for adminclient-1 unregistered
+2023-07-28 13:58:56.410 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.k.c.a.internals.AdminMetadataManager] - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+2023-07-28 13:58:56.410 INFO  [kafka-admin-client-thread | adminclient-1] [o.a.kafka.clients.admin.KafkaAdminClient] - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2023-07-28 13:58:56.411 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2023-07-28 13:58:56.411 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-07-28 13:58:56.411 INFO  [kafka-admin-client-thread | adminclient-1] [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2023-07-28 13:58:56.412 INFO  [RMI TCP Connection(342)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-07-28 13:58:56.415 INFO  [RMI TCP Connection(342)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
